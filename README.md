@@ -32,3 +32,6 @@ This is a React/Next.js port of your existing jQuery/Bootstrap trading UI. It ca
 - Ported Trade tab, Clients/Groups, Orders/Positions/Holdings/Summary, and Copy Trading logic from the original HTML/JS.
 - Select2 has been replaced with `react-select/Async` for symbol search.
 - jQuery modals and DOM manipulations have been converted to React Bootstrap and hooks.
+
+- <!-- rebuild trigger -->
+
