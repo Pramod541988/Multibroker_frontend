@@ -3,7 +3,8 @@
 import { useEffect, useMemo, useState, useRef } from 'react';
 import { Card, Button, Modal, Form, Table, Badge, ButtonGroup } from 'react-bootstrap';
 
-import API_BASE from '../lib/apiBase';
+import API_BASE from '../src/lib/apiBase';
+
 
 // ----- helpers (frontend-only fallbacks) -----
 const LS_KEY_GROUPS = 'mb_groups_v2_groupMultiplier';
