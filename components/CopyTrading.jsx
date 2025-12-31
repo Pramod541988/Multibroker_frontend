@@ -4,7 +4,8 @@
 import { useEffect, useState } from 'react';
 import { Card, Button, Table, Modal, Form, Badge } from 'react-bootstrap';
 
-const API_BASE = process.env.NEXT_PUBLIC_API_BASE || 'http://127.0.0.1:5001';
+import API_BASE from '../src/lib/apiBase';
+
 
 export default function CopyTrading() {
   const [clients, setClients] = useState([]);
