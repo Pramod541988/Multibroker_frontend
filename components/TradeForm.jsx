@@ -121,9 +121,13 @@ export default function TradeForm() {
   ]);
 
   // ---------- initial data ----------
-  useEffect(() => {
-    api.get('/get_clients').then(res => setClients(res.data?.clients || [])).catch(() => {});
-    api.get('/groups').then(res => {
+ useEffect(() => {
+  api.get('/clients')
+    .then(res => setClients(res.data?.clients || []))
+    .catch(() => {});
+
+  api.get('/groups')
+    .then(res => {
       const normalized = (res.data?.groups || []).map(g => ({
         group_name: g.name || g.group_name || g.id,
         no_of_clients: (g.members || g.clients || []).length,
@@ -131,8 +135,10 @@ export default function TradeForm() {
         client_names: (g.members || g.clients || []).map(m => m.name || m),
       }));
       setGroups(normalized);
-    }).catch(() => {});
-  }, []);
+    })
+    .catch(() => {});
+}, []);
+
 
   // ---------- symbol search ----------
   const loadSymbolOptions = async (inputValue) => {
